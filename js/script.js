@@ -17,6 +17,8 @@ document.querySelector('#easy-diff').addEventListener('click', function () {
 
         document.querySelector('#grid').style = 'max-width: 800px;';
 
+
+
     }
 
 });
@@ -119,19 +121,27 @@ document.querySelector("#start-btn").addEventListener('click', function () {
 
         });
 
-    }
+        function randomNumbers() {
+            let randomNUmbers = [];
 
-    // creo un array per i numeri random
-    let randomNUmbers = [];
-
-    // creo un ciclo per generare 16 numeri random
-    while (randomNUmbers.length < 16) {
-        let random = Math.floor(Math.random() * cellsNumber) + 1;
-        if (!randomNUmbers.includes(random)) {
-            randomNUmbers.push(random);
+            while (randomNUmbers.length < 16) {
+                let random = Math.floor(Math.random() * cellsNumber) + 1;
+                if (!randomNUmbers.includes(random)) {
+                    randomNUmbers.push(random);
+                }
+            }
+            return randomNUmbers;
         }
     }
-    console.log(randomNUmbers);
+
+    console.log(randomNumbers());
+
+
+
+
+
+
+
 
 
 
